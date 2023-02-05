@@ -4,7 +4,7 @@ import { Mica, MicaBrowserWindow, Theme } from "mica-electron-ts";
 
 export class ZyrotecWindow{
     public zyrotecWindow!: MicaBrowserWindow;
-    public messageDialog: ZyrotecMessageDialog = new ZyrotecMessageDialog('http://localhost:4200', this.zyrotecWindow);
+    public messageDialog: ZyrotecMessageDialog = new ZyrotecMessageDialog('http://localhost:4200/message-dialog', this.zyrotecWindow);
 
     constructor(private _title: string, private _url: string){}
 
