@@ -1,3 +1,4 @@
+import { ElectronService } from './@core/services/electron.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'zyrotec-electron';
+  constructor(private _electronService: ElectronService){}
 }

@@ -1,29 +1,19 @@
-import{ app, BrowserWindow } from 'electron';
+import{ app, BrowserWindow, ipcMain } from 'electron';
+import { Mica, MicaBrowserWindow, Theme } from 'mica-electron-ts';
 import * as path from 'path';
+import { ZyrotecMainWindow } from './windows/zyrotec-main-window';
 
 require('electron-reloader')(module);
 
-function createMainWindow(): void {
-    const mainWindow: BrowserWindow = new BrowserWindow({
-        height: 600,
-        width: 800,
-        minHeight: 300,
-        minWidth: 400,
-        webPreferences: {
-            nodeIntegration: true,
-            contextIsolation: false,
-        }
-    })
-
-    mainWindow.loadURL('http://localhost:4200');
-}
+//Initialize Windows and Dialogs
+let mainWindow: ZyrotecMainWindow = new ZyrotecMainWindow('Zyrotec Electron', 'http://localhost:4200');
 
 app.whenReady().then(() => {
-    createMainWindow();
+    mainWindow.createMainWindow();
 
     app.on('activate', () => {
         if(BrowserWindow.getAllWindows().length === 0){
-            createMainWindow();
+            mainWindow.createMainWindow();
         }
     })
 });
