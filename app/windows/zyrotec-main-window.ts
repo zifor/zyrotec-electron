@@ -1,7 +1,6 @@
 import { ZyrotecMessageDialog } from '../dialogs/zyrotec-message-dialog';
 import { ipcMain } from "electron";
 import { Mica, MicaBrowserWindow, Theme } from "mica-electron-ts";
-import { OnInit } from '@angular/core';
 
 export class ZyrotecMainWindow{
     public zyrotecMainWindow!: MicaBrowserWindow;
