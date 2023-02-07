@@ -1,0 +1,116 @@
+$titlebar-height: 32px;
+$caption-button-width: 46px;
+
+:host{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.titlebar{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: $titlebar-height;
+    width: 100%;
+    background: #fff;
+
+    box-shadow: 0 0px 5px 2px rgba(0,0,0,0.5);
+
+    z-index: 1500;
+
+    .icon-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        height: $titlebar-height;
+        width: $titlebar-height;
+
+        .icon{
+            height: 16px;
+            width: 16px;
+        }
+    }
+
+    .menu-button{
+        flex-shrink: 0;
+        height: $titlebar-height;
+        width: $titlebar-height;
+        background: transparent;
+        color: #c8c8c8;
+        border: none;
+        outline: none;
+
+        &:hover{
+            background: rgba(255,255,255,0.15);
+        }
+    }
+
+    .title{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        line-height: 10pt;
+
+        -webkit-app-region: drag;
+    }
+
+    .title-text-indent{
+        text-indent: 10px;
+    }
+
+    .caption-button-container{
+        display: flex;
+        flex-shrink: 0;
+        .btn-caption{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: $titlebar-height;
+            width: $caption-button-width;
+            border: none;
+            outline: none;
+        }
+
+        .btn-minimize, .btn-restore{
+            background: transparent;
+            color: #ff0000;
+
+            &:hover{
+                background: rgba(255,255,255,0.15);
+            }
+        }
+
+        .btn-fullscreen{
+            background: transparent;
+            color: #c8c8c8;
+
+            &:hover{
+                background: rgba(255,255,255,0.15);
+            }
+        }
+
+        .btn-exit{
+            background: transparent;
+            color: red;
+
+            &:hover{
+                background: #ff3550;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.app-region{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+}

@@ -1,2 +1,83 @@
-<p>main-window works!</p>
-<button (click)="show()">Message Box</button>
+<div 
+    id="titlebar"
+    class="titlebar">
+
+    <div class="icon-container">
+        <img src="../favicon.ico" class="icon">
+    </div>
+
+    <button 
+        class="menu-button"
+        *ngIf="isMenuButton"
+    >   
+        >
+    </button>
+
+    <div 
+        class="title"
+        [ngClass]="{'title-text-indent' : isMenuButton}"
+        >
+        {{ windowTitle }} 
+    </div>
+
+    <div class="caption-button-container">
+        <button 
+            class="btn-caption btn-minimize"
+            *ngIf="!isFullscreen"
+            >
+
+            <object 
+                type="image/svg+xml" 
+                data="../../../assets/svg-icons/minimize-icon.svg"
+                >
+            </object>
+            
+
+        </button>
+
+        <button 
+            class="btn-caption btn-restore"
+            *ngIf="!isFullscreen"
+            >
+
+            <object 
+                type="image/svg+xml" 
+                data="../../../assets/svg-icons/restore-icon.svg"
+            >
+            </object>
+            
+        </button>
+
+        <button 
+            class="btn-caption btn-fullscreen"
+            *ngIf="isFullscreen"
+            >
+
+            <object 
+                type="image/svg+xml" 
+                data="../../../assets/svg-icons/fullscreen-icon.svg"
+            >
+            </object>
+            
+        </button>
+
+        <button 
+            class="btn-caption btn-exit"
+        >
+
+            <object 
+                type="image/svg+xml" 
+                data="../../../assets/svg-icons/exit-icon.svg"
+            >
+            </object>
+            
+        </button>
+    </div>
+</div>
+
+<div 
+    id="app-region"
+    class="app-region"
+    >
+    Hello world
+</div>

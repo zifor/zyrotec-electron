@@ -1,0 +1,10 @@
+<svg width="11px" height="11px" viewBox="0 0 11 11" version="1.1"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns="http://www.w3.org/2000/svg">
+  <g id="Group" transform="translate(0.5 0.5)">
+    <path d="M6 0L6 4L10 4" id="Vector-3" fill="none" fill-rule="evenodd" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M10 0L6.5 3.5" id="Vector-4" fill="none" fill-rule="evenodd" stroke="#fff" stroke-width="1" stroke-linecap="round" />
+    <path d="M0 10L3.5 6.5" id="Vector-6" fill="none" fill-rule="evenodd" stroke="#fff" stroke-width="1" stroke-linecap="round" />
+    <path d="M0 6L4 6L4 10" id="Vector-7" fill="none" fill-rule="evenodd" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>
